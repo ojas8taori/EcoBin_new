@@ -243,11 +243,16 @@ export class DatabaseStorage implements IStorage {
 
   // Challenges
   async getActiveChallenges(): Promise<EcoChallenge[]> {
-    return await db
-      .select()
-      .from(ecoChallenges)
-      .where(eq(ecoChallenges.isActive, true))
-      .orderBy(ecoChallenges.endDate);
+    try {
+      return await db
+        .select()
+        .from(ecoChallenges)
+        .where(eq(ecoChallenges.isActive, 1)) // Use 1 instead of true for SQLite compatibility
+        .orderBy(ecoChallenges.endDate);
+    } catch (error) {
+      console.error('Error fetching challenges:', error);
+      return [];
+    }
   }
 
   async getUserChallengeProgress(userId: string): Promise<UserChallengeProgress[]> {
@@ -276,11 +281,16 @@ export class DatabaseStorage implements IStorage {
 
   // Rewards
   async getAvailableRewards(): Promise<Reward[]> {
-    return await db
-      .select()
-      .from(rewards)
-      .where(eq(rewards.isActive, true))
-      .orderBy(rewards.ecoPointsCost);
+    try {
+      return await db
+        .select()
+        .from(rewards)
+        .where(eq(rewards.isActive, 1)) // Use 1 instead of true for SQLite compatibility
+        .orderBy(rewards.ecoPointsCost);
+    } catch (error) {
+      console.error('Error fetching rewards:', error);
+      return [];
+    }
   }
 
   async redeemReward(userId: string, rewardId: number): Promise<UserReward> {

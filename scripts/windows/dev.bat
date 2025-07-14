@@ -1,3 +1,4 @@
 @echo off
-set NODE_ENV=development
-tsx server/index.ts
+echo Starting EcoBin development server...
+echo.
+npx cross-env NODE_ENV=development tsx server/index.ts

@@ -16,10 +16,11 @@ EcoBin is a comprehensive full-stack web application designed to transform waste
 
 ### Windows Users (Recommended Method)
 1. **Extract** the project to any folder (e.g., `C:\EcoBin`)
-2. **Open Command Prompt as Administrator**
+2. **Open Command Prompt as Administrator** 
 3. **Navigate** to the project folder
-4. **Run**: `scripts\windows\dev.bat`
-5. **Open browser** to: `http://localhost:5000`
+4. **Run setup**: `scripts\windows\setup.bat` (first time only)
+5. **Start server**: `scripts\windows\dev.bat`
+6. **Open browser** to: `http://localhost:5000`
 
 ### Alternative Method (All Platforms)
 ```bash
