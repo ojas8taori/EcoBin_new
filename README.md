@@ -5,7 +5,7 @@
 ### Windows Users
 1. **Navigate to project folder in Command Prompt**
 2. **Run setup** (first time only): `scripts\windows\setup.bat`
-3. **Start server**: `scripts\windows\dev.bat`
+3. **Start server**: `scripts\windows\dev-npm.bat` (recommended) or `scripts\windows\dev.bat`
 4. **Open browser to**: `http://localhost:5000`
 
 ### All Platforms

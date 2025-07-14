@@ -32,9 +32,18 @@ if not exist "data" mkdir data
 
 echo.
 echo Testing cross-env...
-npx cross-env NODE_ENV=test node -e "console.log('Environment test:', process.env.NODE_ENV)"
+call npx cross-env NODE_ENV=test node -e "console.log('Environment test:', process.env.NODE_ENV)"
 if %errorlevel% neq 0 (
     echo ERROR: cross-env test failed
+    pause
+    exit /b 1
+)
+
+echo.
+echo Testing tsx...
+call npx tsx --version
+if %errorlevel% neq 0 (
+    echo ERROR: tsx not available
     pause
     exit /b 1
 )

@@ -52,11 +52,38 @@ npm run dev
 
 The `scripts/windows/` folder contains Windows-specific batch files:
 
-#### `dev.bat`
+#### `dev-npm.bat` (Recommended)
 ```batch
 @echo off
-set NODE_ENV=development
-tsx server/index.ts
+echo Starting EcoBin development server using npm...
+echo.
+
+echo Checking if dependencies are installed...
+if not exist "node_modules" (
+    echo Installing dependencies...
+    call npm install
+)
+
+echo.
+echo Starting server using npm run dev...
+call npm run dev
+```
+
+#### `dev.bat` (Alternative)
+```batch
+@echo off
+echo Starting EcoBin development server...
+echo.
+
+echo Checking if dependencies are installed...
+if not exist "node_modules" (
+    echo Installing dependencies...
+    call npm install
+)
+
+echo.
+echo Starting server with cross-env...
+call npx cross-env NODE_ENV=development npx tsx server/index.ts
 ```
 
 #### `start.bat` 
@@ -162,7 +189,15 @@ node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 #### NODE_ENV Error
 If you get `'NODE_ENV' is not recognized as an internal or external command`:
 - Use the Windows batch files in `scripts/windows/` folder
-- Or install cross-env: `npm install -g cross-env` and use `cross-env NODE_ENV=development tsx server/index.ts`
+- **Recommended**: Run `scripts\windows\dev-npm.bat` which uses the npm script
+- **Alternative**: Run `scripts\windows\dev.bat` which uses cross-env directly
+- Or install cross-env globally: `npm install -g cross-env`
+
+#### TSX Not Found Error
+If you get `'tsx' is not recognized as an internal or external command`:
+- **Solution 1**: Use `scripts\windows\dev-npm.bat` (recommended)
+- **Solution 2**: Install tsx globally: `npm install -g tsx`
+- **Solution 3**: Use npx: `npx cross-env NODE_ENV=development npx tsx server/index.ts`
 
 #### Permission Errors
 - Run Command Prompt as Administrator

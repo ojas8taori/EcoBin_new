@@ -6,11 +6,20 @@ echo Installing npm dependencies...
 call npm install
 
 echo.
-echo Cross-env installed for Windows compatibility
-echo.
+echo Installing cross-env globally for Windows compatibility...
+call npm install -g cross-env
 
+echo.
 echo Creating data directory...
 if not exist "data" mkdir data
+
+echo.
+echo Verifying installation...
+echo Node.js version:
+node --version
+echo.
+echo npm version:
+npm --version
 
 echo.
 echo Setup complete! 
