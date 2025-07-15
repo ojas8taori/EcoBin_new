@@ -10,12 +10,19 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes (Migration Summary)
 
+### Project Cleanup & Organization (July 15, 2025)
+- **Reorganized**: All Windows batch files moved to `scripts/windows/` folder
+- **Consolidated**: All documentation into comprehensive README.md file
+- **Removed**: DOCUMENTATION.md (redundant)
+- **Fixed**: Navigation links from `/api/login` to `/auth` for local authentication
+- **Fixed**: Button text typo "Get Startedt Started" to "Get Started"
+- **Benefits**: Cleaner project structure, single source of documentation
+
 ### Replit Agent Migration (July 2025)
 - **Migrated from**: Replit Agent to standard Replit environment
 - **Completed**: Full Windows compatibility with batch scripts
-- **Added**: `scripts/windows/` folder with dev.bat, build.bat, start.bat
+- **Added**: `scripts/windows/` folder with comprehensive Windows support
 - **Fixed**: NODE_ENV Windows compatibility issues
-- **Consolidated**: All documentation into single DOCUMENTATION.md file
 - **Benefits**: Improved security, proper client/server separation, cross-platform support
 
 ### Database Migration (MySQL/SQLite Hybrid)
@@ -30,11 +37,6 @@ Preferred communication style: Simple, everyday language.
 - **Updated pages**: Landing, About, Community, Learn
 - **Real data sources**: Global waste production (2B+ tons annually), food waste (1/3 of production), marine animal deaths from plastic (millions), etc.
 - **Date**: January 2025
-
-### Windows Compatibility
-- **Enhanced**: Complete Windows batch file system in `scripts/windows/`
-- **Created**: Migration tools (`export-data.js`, `import-data.js`)
-- **Documentation**: Consolidated into comprehensive DOCUMENTATION.md
 
 ## System Architecture
 
