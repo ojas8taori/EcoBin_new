@@ -36,6 +36,7 @@ echo     Data directory: OK
 echo.
 echo [4/4] Starting development server...
 echo     Server will start on: http://localhost:5000
+echo     Windows-compatible configuration applied
 echo     Press Ctrl+C to stop the server
 echo.
 echo ====================================
