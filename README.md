@@ -4,9 +4,13 @@
 
 ### Windows Users
 1. **Navigate to project folder in Command Prompt**
-2. **Run setup** (first time only): `scripts\windows\setup.bat`
-3. **Start server**: `scripts\windows\dev-npm.bat` (recommended) or `scripts\windows\dev.bat`
-4. **Open browser to**: `http://localhost:5000`
+2. **Start server**: `scripts\windows\start-windows.bat` (recommended)
+3. **Open browser to**: `http://localhost:5000`
+
+**Alternative methods:**
+- `scripts\windows\dev-npm.bat` (bypasses npm script)
+- `scripts\windows\dev.bat` (uses cross-env directly)
+- `scripts\windows\setup.bat` (setup only)
 
 ### All Platforms
 ```bash
