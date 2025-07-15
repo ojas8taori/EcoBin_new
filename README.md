@@ -10,6 +10,12 @@ EcoBin is a comprehensive full-stack web application designed to transform waste
 - **Millions** of marine animals die annually from plastic pollution
 - **Small percentage** of plastic waste is actually recycled
 
+## Prerequisites
+
+1. **Node.js** (v18 or higher) - [Download](https://nodejs.org/)
+2. **MySQL** (optional) - [Download](https://dev.mysql.com/downloads/)
+3. **Git** (optional) - [Download](https://git-scm.com/)
+
 ## 🚀 Quick Start
 
 ### Windows Users (Recommended)
@@ -64,28 +70,7 @@ npm run dev
 
 ## 🔧 Development Setup
 
-### Prerequisites
-1. **Node.js** (v18 or higher) - [Download](https://nodejs.org/)
-2. **MySQL** (optional) - [Download](https://dev.mysql.com/downloads/)
-3. **Git** (optional) - [Download](https://git-scm.com/)
-
-### Environment Variables
-Create a `.env` file in the root directory:
-
-```env
-# Database (optional - will fallback to SQLite)
-DATABASE_URL="mysql://user:password@localhost:3306/ecobin"
-
-# Google Gemini AI (for waste analysis)
-GOOGLE_AI_API_KEY="your_gemini_api_key_here"
-
-# Session Security
-SESSION_SECRET="your_secure_session_secret"
-
-# Development
-NODE_ENV="development"
-PORT=5000
-```
+### The .env file has been setup to hard code the API key's
 
 ### Installation
 ```bash
@@ -175,10 +160,6 @@ EcoBin supports two authentication systems:
    - Access via `/auth` page
    - Session-based with secure cookies
 
-2. **Replit OAuth** (When deployed on Replit)
-   - OpenID Connect integration
-   - Automatic user provisioning
-
 ## 🤖 AI Integration
 
 ### Google Gemini AI
@@ -186,23 +167,6 @@ EcoBin supports two authentication systems:
 - **Features**: Waste type detection, disposal advice, eco-points calculation
 - **Setup**: Add `GOOGLE_AI_API_KEY` to environment variables
 - **Usage**: Upload images through the Scanner page
-
-## 🚀 Deployment
-
-### Replit Deployment
-The project is optimized for Replit deployment:
-- `.replit` configuration included
-- Automatic environment setup
-- Built-in workflows for development
-
-### Manual Deployment
-```bash
-# Build for production
-npm run build
-
-# Start production server
-npm start
-```
 
 ## 📱 API Endpoints
 
