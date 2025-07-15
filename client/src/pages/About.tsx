@@ -435,7 +435,7 @@ export default function About() {
               <Button 
                 size="lg"
                 className="bg-white text-eco-green hover:bg-gray-100"
-                onClick={() => window.location.href = "/api/login"}
+                onClick={() => window.location.href = "/auth"}
               >
                 Get Started Now
               </Button>

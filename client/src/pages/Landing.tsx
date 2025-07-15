@@ -255,10 +255,10 @@ export default function Landing() {
                 <Button 
                   size="lg" 
                   className="bg-eco-green hover:bg-eco-dark-green text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                  onClick={() => window.location.href = "/api/login"}
+                  onClick={() => window.location.href = "/auth"}
                 >
                   <Download className="mr-2 h-5 w-5" />
-                  Get Started
+                  Get Startedt Started
                 </Button>
                 <Button 
                   variant="outline" 
@@ -769,14 +769,14 @@ export default function Landing() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button 
               className="bg-white text-eco-green hover:bg-gray-100 px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              onClick={() => window.location.href = "/api/login"}
+              onClick={() => window.location.href = "/auth"}
             >
               <Apple className="mr-2 h-5 w-5" />
               Get Started Now
             </Button>
             <Button 
               className="bg-white text-eco-green hover:bg-gray-100 px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              onClick={() => window.location.href = "/api/login"}
+              onClick={() => window.location.href = "/auth"}
             >
               <Smartphone className="mr-2 h-5 w-5" />
               Try Web Version
