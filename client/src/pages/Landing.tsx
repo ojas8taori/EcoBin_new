@@ -258,7 +258,7 @@ export default function Landing() {
                   onClick={() => window.location.href = "/auth"}
                 >
                   <Download className="mr-2 h-5 w-5" />
-                  Get Startedt Started
+                  Get Started
                 </Button>
                 <Button 
                   variant="outline" 
